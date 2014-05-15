@@ -165,7 +165,7 @@ capacity = 40;
 
 // useful for detail vis, removes weird chars, chops @ 19 or 21, then last word
 last_alpha = function(s,n) {
-  s = s.replace(/[^a-zA-Z ,'.-]/gi, '');
+  s = s.replace(/[^a-zA-Z0-9 ,'.-]/gi, '');
   s = s.slice(0, n);
   if (s.length < n) { return s; }
   var chopAt = n;
@@ -436,8 +436,8 @@ function makevis() {
 
             //Add node for each painting
             graph.nodes.push({
-              painting: data[i]['painting'].replace(/[^a-zA-Z ,'.-]/gi, ''),
-              artist: data[i]['artist'].replace(/[^a-zA-Z ,'.-]/gi, ''),
+              painting: data[i]['painting'].replace(/[^a-zA-Z0-9 ,'.-]/gi, ''),
+              artist: data[i]['artist'].replace(/[^a-zA-Z0-9 ,'.-]/gi, ''),
               record: data[i]['record'],
               image: data[i]['image'],
               date: data[i]['date'],
@@ -445,7 +445,7 @@ function makevis() {
               topics: data[i]['topics']
             });
 
-            // if the artist isn't already in the array, create the counter to be set to 0
+            // if the artist isn't already in the array, create the counter = 0
             if (!artist_obj[data[i]['artist']]) {
               artist_obj.push(artist_obj[data[i]['artist']] = 0);
               artist_number++;
