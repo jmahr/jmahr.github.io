@@ -1,3 +1,3 @@
-# FC HTML
+# beIN Sports Hackathon, March 2015
 
-* [Homepage](//uouapps.github.io/metrodir-html/)
+* [Homepage](//uouapps.github.io/)
