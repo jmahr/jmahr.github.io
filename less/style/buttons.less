@@ -1,0 +1,28 @@
+/* BUTTONS */
+
+.button {
+	padding: @padding-large-vertical*1.5 @padding-large-horizontal*2;
+	display: inline-block;
+	text-transform: uppercase;
+	color: #fff;
+	background: @red;
+	text-align: center;
+
+	&:hover {
+		color: #fff;
+		background: darken(@red, 5%);
+		text-decoration: none;
+	}
+
+	span {
+		margin-right: 7px;
+	}
+
+	i {
+		color: #fff;
+
+		&.fa.fa-arrow-circle-right {
+			font-size: 16px;
+		}
+	}
+}

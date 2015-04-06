@@ -1,0 +1,173 @@
+/* MATCH */
+
+#match {
+	position: relative;
+	padding: @padding-large-vertical*5.5 0;
+	background-color: @blue-color;
+
+	.heading > h4 {
+		margin-top: 0;
+		color: #fff;
+
+		&:after {
+			background: #fff;
+		}
+	}
+	
+	.match-details {
+		position: relative;
+		margin-bottom: 40px;
+
+		.team {
+			padding: 0 @padding-large-horizontal*1.5;
+			float: left;
+			width: 41%;
+			height: 50px;
+			line-height: 50px;
+			overflow: hidden;
+			background: -moz-linear-gradient(top, lighten(@light-gray-color, 10%) 0%, lighten(@light-gray-color, 5%) 50%, lighten(@light-gray-color, 4%) 100%);
+	    background: -webkit-linear-gradient(top, lighten(@light-gray-color, 10%) 0%, lighten(@light-gray-color, 5%) 50%, lighten(@light-gray-color, 4%) 100%);
+	    background: -o-linear-gradient(top, lighten(@light-gray-color, 10%) 0%, lighten(@light-gray-color, 5%) 50%, lighten(@light-gray-color, 4%) 100%);
+	    background: -ms-linear-gradient(top, lighten(@light-gray-color, 10%) 0%, lighten(@light-gray-color, 5%) 50%, lighten(@light-gray-color, 4%) 100%);
+	    background: linear-gradient(to bottom, lighten(@light-gray-color, 10%) 0%, lighten(@light-gray-color, 5%) 50%, lighten(@light-gray-color, 4%) 100%);
+			
+			&.right img {
+				margin-right: 0;
+				margin-left: 15px;
+			}	
+
+			img {
+				margin-right: 15px;
+				width: 33px;
+				height: 33px;
+			}
+
+			span {
+				padding-top: 2px;
+			}
+		}
+
+		.schedule {
+			padding: 10.5px @padding-large-horizontal;
+			float: left;
+			width: 18%;
+			height: 50px;
+			text-align: center;
+			font-size: 10px;
+			background: lighten(@blue-color, 10%);
+
+			.team-name {
+				display: block;
+				text-transform: uppercase;
+				color: #fff;
+			}
+
+			.time {
+				color: rgba(255,255,255,0.5);
+				font-weight: bold;
+			}
+		}
+	}
+
+	.match-formation {
+		position: relative;
+		height: 225px;
+		background: url(../img/pitch.png) no-repeat center;
+		background-size: 90%;
+
+		.player {
+			position: absolute;
+			width: 49px;
+			height: 68px;
+			background: url(../img/formation-player.png) no-repeat bottom left;
+			background-size: 35px 41px;
+
+			&.gk {
+				top: 13%;
+				left: 25%;
+			}
+
+			&.lwb {
+				top: -8%;
+				left: 33.5%;
+			}
+
+			&.lcb {
+				top: -2%;
+				left: 30%;
+			}
+
+			&.cb {
+				top: 17%;
+				left: 28%;
+			}
+
+			&.rcb {
+				bottom: 33%;
+				left: 25.5%;
+			}
+
+			&.rwb {
+				bottom: 22%;
+				left: 28%;
+			}
+
+			&.lcm {
+				margin-left: -12px;
+				top: 5%;
+				left: 50%;
+			}
+
+			&.rcm {
+				margin-left: -12px;
+				top: 26%;
+				left: 50%;
+			}
+
+			&.ls {
+				right: 26%;
+				top: 26%;
+			}
+
+			&.cf {
+				right: 34%;
+				top: 16%;
+			}
+
+			&.rs {
+				right: 30%;
+				top: 2%;
+			}
+
+			.caption {
+				position: relative;
+				float: right;
+				display: inline-block;
+				width: 23px;
+				height: 14px;
+				line-height: 14px;
+				font-size: 8px;
+				font-weight: bold;
+				text-align: center;
+				background-color: #fff;
+				z-index: 99999;
+				
+				&:after {
+					position: absolute;
+					top: 14px;
+					left: 0;
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 9px 9px 0 0;
+					border-color: #ffffff transparent transparent; 
+					content: "";
+				}
+			}
+		}
+	}
+
+	@media(max-width: @screen-md) {
+		display: none;		
+	}
+}

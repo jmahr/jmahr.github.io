@@ -1,0 +1,256 @@
+/* TEAMS */
+
+.teams {
+	position: relative;
+	padding: @padding-large-vertical*5.5 0;
+
+	.teams-frame {
+		position: relative;
+		overflow: hidden;
+
+		.player-profile {
+			position: relative;
+			margin-left: 46px;
+
+			.big-thumbnail {
+				width: 530px;
+				height: 400px;
+				float: left;
+
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			.player-description {
+				padding: @padding-large-vertical*6.5 @padding-large-horizontal*6 @padding-large-vertical*1.5 @padding-large-horizontal*3;
+				width: 529px;
+				height: 400px;
+				float: left;
+
+				.logo-background {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					margin-top: -112px;
+					margin-left: -120px;
+					z-index: -1;
+				}
+
+				h3 {
+					padding: 0;
+					margin: 0 0 30px 0;
+					text-transform: none;
+				}
+
+				.player-details {
+					width: 50%;
+					float: left;
+
+					&.pull-left {
+						padding-right: 15px;
+					}
+
+					&.pull-right {
+						padding-left: 15px;
+					}
+
+					li {
+						padding: @padding-large-vertical*0.8 0;
+						border-bottom: 1px dashed darken(@light-gray-color, 15%);
+
+						&:last-child {
+							border-bottom: none;
+						}
+
+						h5 {
+							position: absolute;
+							margin: 3px 0 0 0;
+							float: left;
+							color: darken(@light-gray-color, 35%);
+						}
+
+						span {
+							padding-left: 80px;
+						}
+					}
+
+					@media(max-width: @screen-xs) {
+						width: 100%;
+
+						&.pull-right {
+							padding-left: 0;
+						}
+					}
+				}
+
+				.read_more {
+					margin-top: 35px;
+
+					@media(max-width: @screen-xs) {
+						margin-bottom: 60px;
+					}
+				}
+			}
+
+			@media(max-width: @screen-lg-desktop) {
+				.big-thumbnail {
+					width: 440px;
+					height: 363px;
+				}
+
+				.player-description {
+					padding: 45px 25px 15px 30px;
+					width: 414px;
+					height: 363px;
+				}
+			}
+
+			@media(max-width: @screen-md) {
+				margin-left: 0;
+				margin-bottom: 30px;
+
+				.big-thumbnail {
+					margin-top: 45px;
+					margin-left: 30px;
+					width: 200px;
+					height: 160px;
+				}
+
+				.player-description {
+					width: 450px;
+				}
+			}
+
+			@media(max-width: @screen-sm) {
+
+				.big-thumbnail {
+					margin: 30px auto;
+					float: none;
+					text-align: center;
+				}
+
+				.player-description {
+					padding-top: 0;
+					width: 100%;
+					float: none;
+					height: auto;
+				}
+			}
+		}
+
+		.owl-carousel .owl-wrapper-outer {
+			position: relative;
+			border: 5px solid #eee;
+		}
+	}
+
+	.team-players {
+		margin-left: 46px;
+		float: left;
+		border: 3px solid @light-gray-color;
+
+		.player-profile {
+			position: relative;
+			margin-left: 0;
+			margin-bottom: 0;
+			float: left;
+			width: 176.2px;
+			height: 185px;
+			border: 1px solid #fff;
+
+			.thumbnail {
+				width: 100%;
+				height: 100%;
+			}
+
+			.number {
+				position: absolute;
+				width: 28px;
+				height: 28px;
+				display: inline-block;
+				left: 7px;
+				bottom: 38px;
+				text-align: center;
+				line-height: 26px;
+				color: #fff;
+				background: @red;
+			}
+
+			.name {
+				position: absolute;
+				padding: @padding-large-vertical*0.6 @padding-small-horizontal;
+				left: 7px;
+				bottom: 7px;
+				color: #fff;
+				background: @blue-color;
+			}
+
+			@media(max-width: @screen-lg-desktop) {
+				width: 171.3px;
+				height: 178px;
+			}
+
+			@media(max-width: @screen-desktop) {
+				width: 212.3px;
+				height: 224px;
+			}
+
+			@media(max-width: @screen-tablet) {
+				width: 50%;
+				height: auto;
+			}
+
+			@media(max-width: @screen-xs) {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		@media(max-width: @screen-tablet) {
+			margin-left: 0;
+		}
+	}
+
+	.owl-controls {
+		position: absolute;
+		margin: 0;
+		right: 30px;
+		bottom: 30px;
+
+		.owl-buttons > div {
+			margin-left: 2px;
+			float: left;
+			display: inline-block;
+			width: 38px;
+			height: 38px;
+			text-align: center;
+			line-height: 38px;
+			cursor: pointer;
+			background: @red;
+
+			&.owl-prev:before {
+				content: "\f104";
+				font-family: FontAwesome;
+				color: #fff;
+				font-size: 24px;
+			}
+
+			&.owl-next:before {
+				content: "\f105";
+				font-family: FontAwesome;
+				color: #fff;
+				font-size: 24px;
+			}
+
+			&:hover {
+				background: darken(@red, 5%)
+			}
+		}
+
+		@media(max-width: @screen-xs) {
+			left: 33px;
+		}
+	}
+}

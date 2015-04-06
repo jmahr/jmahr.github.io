@@ -1,0 +1,156 @@
+/* FOOTER */
+
+#footer {
+  position: relative;
+  padding-top: @padding-large-vertical*6;
+	background: @blue-color;
+	border-top: 5px solid #fff;
+
+	.widget {
+		position: relative;
+		padding-bottom: @padding-large-vertical*4;
+
+		h5 {
+			padding-bottom: @padding-base-vertical*2.3;
+			margin-top: 0;
+			margin-bottom: 15px;
+			color: #fff;
+			border-bottom: 1px dashed #515965;
+		}
+
+		p {
+			color: rgba(255, 255, 255, 0.5);
+		}
+
+		i {
+			font-size: 14px;
+			color: #fff;
+		}
+
+		li {
+			margin-bottom: 12px;
+
+			&:last-child {
+				margin-bottom: 0; 
+			}
+
+			a {
+				font-weight: normal;
+				color: rgba(255, 255, 255, 0.5);
+
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+
+		.contact-info {
+			margin-top: 15px;
+
+			li {
+
+				i { 
+					position: absolute;
+					padding-top: 2px;
+				}
+				
+				span {
+					padding-left: 18px;
+					color: rgba(255, 255, 255, 0.5);
+				}
+			}
+		}
+
+		.gallery {
+			margin-left: -12px;
+
+			li {
+				margin-left: 12px;
+				float: left;
+
+				img {
+					width: 77px;
+					height: 77px;
+					.transition(all .2s ease-in-out); 
+
+					&:hover {
+						opacity: .6;
+						.transition(all .2s ease-in-out); 
+					}
+				}
+			}
+
+			@media(max-width: @screen-lg-desktop) {
+				li img {
+					width: 60px;
+					height: 60px;
+				}
+			}
+		}
+
+		.newsletter {
+			position: relative;
+			margin-top: 20px;
+			
+			input {
+				margin-bottom: 5px;
+				width: 100%;
+			}
+		}
+
+		.contact-form {
+
+			input,
+			textarea {
+				width: 100%;
+			}
+
+			.form-row {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.sponsors {
+		padding-bottom: @padding-base-vertical*3;
+		background: url(../img/shadow.png) no-repeat top;
+		background-size: 1110px 18px;
+		
+		h5 {
+			margin-top: 40px;
+			color: #fff;
+		}
+
+		.sponsor-logo {
+			padding: @padding-base-vertical*3.5 0;
+
+			img {
+				opacity: .4;
+				.transition(all .2s ease-in-out); 
+
+				&:hover {
+					opacity: 1;
+					.transition(all .2s ease-in-out); 
+				}
+			}
+
+			@media(max-width: @screen-desktop) {
+				height: 88px;
+			}
+		}
+
+		@media(max-width: @screen-lg-desktop) {
+			background-size: 100% 15px;
+		}
+	}
+
+	.copyrights {
+		padding: @padding-base-vertical*2.7 0;
+		background: @darker-blue-color;
+
+		p { 
+			margin: 0; 
+			color: rgba(255, 255, 255, 0.5);
+		}
+	}
+}

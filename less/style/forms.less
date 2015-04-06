@@ -1,0 +1,88 @@
+/* FORMS */
+
+.default-form {
+
+	input,
+	textarea {
+		padding: 0 @padding-base-horizontal;
+		height: 40px;
+		border: 1px solid transparent;
+		border-radius: 0;
+
+		&[type="submit"] {
+			padding: @padding-large-vertical*1 @padding-large-horizontal*2;
+			display: inline-block;
+			height: auto;
+			text-transform: uppercase;
+			color: #fff;
+			background: @red;
+			text-align: center;
+
+			&:hover {
+				background: darken(@red, 5%);
+				text-decoration: none;
+			}
+
+			&.full-width {
+				width: 100%;
+			}
+		}
+	}
+
+	textarea {
+		padding: @padding-base-vertical*1.6 @padding-base-horizontal;
+	}
+
+	.button {
+		font-weight: bold;
+		border: none;
+		.transition(all .2s ease-in-out); 
+	}
+}
+
+select {
+	display: none;
+}
+
+.uou-custom-select {
+	position: relative;
+
+	.placeholder {
+		padding: @padding-base-vertical @padding-base-horizontal;
+		width: 165px;
+		display: inline-block;
+		color: @blue-color;
+		height: 27px;
+		background: #fff;
+		cursor: pointer;
+	}
+
+	.fa {
+		width: 27px;
+		height: 27px;
+		line-height: 27px;
+		vertical-align: top;
+		text-align: center;
+		color: #fff;
+		background: @red;
+		cursor: pointer;
+	}
+
+	.select-clone {
+		position: absolute;
+		padding: 0;
+		margin: 0;
+		display: none;
+		width: 100%;
+		z-index: 9999;
+
+		li {
+			padding: @padding-base-vertical @padding-base-horizontal;
+			color: #fff;
+			height: 27px;
+			background: darken(@blue-color, 9%);
+			border-bottom: 1px solid darken(@blue-color, 5%);
+			cursor: pointer;
+		}
+	}
+}

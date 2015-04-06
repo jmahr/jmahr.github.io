@@ -1,0 +1,146 @@
+/* TIMELINE */
+
+.history {
+	position: relative;
+	padding: @padding-large-vertical*6.5 0;
+	border-top: 1px solid @light-gray-color;
+	background: url(../img/soccer_bg.jpg) no-repeat center;
+	background-size: cover;
+
+	.heading > h4 {
+		margin-top: 0;
+	}
+
+	#timeline {
+		position: relative;
+		overflow: hidden;
+
+		#dates {
+			margin-top: 15px;
+			height: 80px;
+
+			&:before {
+				position: absolute;
+				top: 9px;
+				left: 15px;
+				right: 15px;
+				height: 3px;
+				background-color: @gray-base;
+				content: "";
+			}
+
+			li {
+				position: relative;
+				width: 100px;
+				float: left;
+
+				a {
+					position: relative;
+					margin-top: 15px;
+					display: inline-block;
+					width: 30px;
+					color: @gray-base;
+					text-transform: none;
+
+					&:before {
+						position: absolute;
+						top: -29px;
+						background-color: @gray-base;
+						width: 10px;
+						height: 10px;
+						content: "";
+						border-radius: 50%;
+						margin-top: 4px;
+					}
+
+					&.selected:before {
+						top: -33px;
+						width: 16px;
+						height: 16px;
+						background-color: @red;
+					}
+				}
+			}
+		}
+
+		#issues {
+			width: 100%;
+			height: 285px;
+			overflow: hidden;
+
+			li {
+				float: left;
+				width: 920px;
+
+				.history-thumbnail {
+					height: 285px;
+					overflow: hidden;
+					
+					img {
+						width: 100%;
+						height: 100%;
+					}
+
+					@media(max-width: @screen-sm) {
+						text-align: center;
+						height: auto;
+
+						img {
+							width: auto;
+							max-width: 100%;
+							height: auto;
+						}
+					}
+				}
+
+				.history-content {
+					padding-right: @padding-large-vertical*8;
+					margin-top: 45px;
+
+					.title {
+						margin: 5px 0 20px 0;
+						font-size: 18px;
+					}
+				}
+
+				@media(max-width: @screen-lg-desktop) {
+					width: 915px;
+				}
+
+				@media(max-width: @screen-desktop) {
+					width: 705px;
+				}
+
+				@media(max-width: @screen-desktop) {
+					width: 705px;
+				}
+			}
+		}
+
+		#prev {
+			position: absolute;
+			left: 15px;
+			top: 50%;
+
+			i {
+				color: @gray-base;
+				font-size: 64px;
+			}
+		}
+
+		#next {
+			position: absolute;
+			right: 15px;
+			top: 50%;
+
+			i {
+				color: @gray-base;
+				font-size: 64px;
+			}
+		}
+	}
+
+	@media(max-width: @screen-sm) {
+		display: none;
+	}
+}

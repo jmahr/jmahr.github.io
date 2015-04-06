@@ -1,0 +1,364 @@
+/* TABS */
+
+.nav-tabs {
+	position: relative;
+
+	&.horizontal-tab {
+		margin: 0 auto;
+		text-align: center;
+		border-bottom: 5px solid @light-gray-color;
+
+		li {
+			padding: 0 1px;
+
+			&.active a {
+				color: @blue-color;
+				background: #eee;
+
+				&:before {
+					position: absolute;
+					top: 0;
+					left: 50%;
+					margin-left: -6px;
+					content : "";
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 6px 6px 0 6px;
+					border-color: @red transparent transparent; 
+				}
+			}
+
+			a {
+				position: relative;
+				padding: @padding-large-vertical*1.3 @padding-large-horizontal;
+				display: block;
+				width: 170px;
+				text-transform: uppercase;
+				border-top: 3px solid @red;
+				background: @red;
+				color: #fff;
+				text-decoration: none;
+			}
+
+			@media(max-width: @screen-sm) {
+				padding: 0 30px;
+				margin-bottom: 2px;
+				display: block;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				a {
+					margin:0 auto;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&.vertical-tab {
+		position: absolute;
+		padding: 0;
+		top: 0;
+		margin: -23px 0 0 23px;
+		text-align: left;
+		transform-origin: left;
+    transform: rotate(90deg);
+		
+		li {
+			padding: 0 2px;
+			float: left;
+			transform: rotate(-180deg);
+
+			&:first-child {
+				padding-right: 0;
+			}
+
+			&.active a {
+				color: #2a3444;
+				background: #eee;
+
+				&:before {
+					position: absolute;
+					top: 0;
+					left: 50%;
+					margin-left: -6px;
+					content : "";
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 6px 6px 0 6px;
+					border-color: @red transparent transparent; 
+				}
+			}
+
+			a {
+				position: relative;
+				padding: @padding-large-vertical*1.2 @padding-large-horizontal;
+				display: block;
+				height: 46px;
+				width: 120px;
+				text-transform: uppercase;
+				text-align: center;
+				border-top: 3px solid @red;
+				background: @red;
+				color: #fff;
+				text-decoration: none;
+			}
+
+			@media(max-width: @screen-md) {
+				display: inline-block;
+				float: none;
+				transform: none;
+			}
+
+			@media(max-width: @screen-sm) {
+				padding: 0;
+				margin-bottom: 2px;
+				display: block;
+				float: none;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				a {
+					margin:0 auto;
+					width: 100%;
+				}
+			}
+		}
+
+		@media(max-width: @screen-md) {
+			position: relative;
+			margin: 0 auto;
+			transform: none;
+			text-align: center;
+		}
+	}
+
+	&.experience {
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: 40px;
+
+		li {
+			padding: 0;
+			position: relative;
+
+			&.active a {
+				color: @blue-color;
+				background: #eee;
+			}
+
+			&:first-child a {
+				border-top-left-radius: 10px;
+				border-bottom-left-radius: 10px;
+			}
+
+			&:last-child a {
+					border-top-right-radius: 10px;
+					border-bottom-right-radius: 10px;
+			}
+
+			a {
+				position: relative;
+				padding: @padding-small-vertical/2;
+				display: block;
+				width: 113px;
+				color: #fff;
+				text-transform: uppercase;
+				background: @red;
+				text-decoration: none;
+			}
+
+			@media(max-width: @screen-xs) {
+				padding: 0 15px;
+				margin-bottom: 2px;
+				display: block;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				a {
+					margin:0 auto;
+					width: 100%;
+					border-radius: 10px;
+				}
+			}
+		}
+	}
+
+	&.video-tabs {
+		padding: 0;
+		margin: 0;
+		height: 468px;
+		overflow: hidden;
+
+		li {
+			padding: 0;
+			margin-bottom: 1px;
+
+			&.active a {
+				background: @light-gray-color;
+
+				&:before {
+					position: absolute;
+					margin-top: -6px;
+					top: 50%;
+					left: 0;
+					content : "";
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 6px 0 6px 6px;
+					border-color: transparent transparent transparent @red; 
+				}
+
+				.fa {
+					color: @blue-color;
+				}
+
+				.heading-date {
+					color: darken(@light-gray-color, 35%)
+				}
+
+				.heading-title {
+					color: @blue-color;
+				}
+			}
+
+			a {
+				padding: @padding-base-horizontal*2.8 @padding-large-horizontal*1.9;
+				display: block;
+				width: 360px;
+				height: 116px;
+				border-left: 3px solid @red;
+				background: @red;
+				text-decoration: none;
+
+				.fa {
+					color: #fff;
+					font-size: 48px;
+				}
+
+				.heading-content {
+					position: absolute;
+					padding: 33px 48px 33px 33px;
+					top: 0;
+					left: 40px;
+				}
+
+				.heading-date {
+					margin-bottom: 5px;
+					display: block;
+					font-size: 10px;
+					color: rgba(255,255,255,0.5);
+					text-transform: uppercase;
+				}
+
+				.heading-title {
+					margin: 0;
+					color: #fff;
+					font-size: 14px;
+					font-family: 'open sans';
+					text-transform: none;
+				}
+
+				@media(max-width: @screen-lg-desktop) {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&.teams-filter {
+		position: relative;
+		padding: 0 77px;
+		margin-bottom: 60px;
+
+		li {
+			position: relative;
+			padding: 0;
+			margin: 0;
+			border: 1px solid #fff;
+			border-right: none;
+			text-align: center;
+
+			&.active1 a,
+			&.active2 a {
+				background: @red;
+			}
+
+			a {
+				padding-top: 15px;
+				height: 93px;
+				display: block;
+				color: #fff;
+				font-weight: normal;
+				background: lighten(@blue-color, 10%);
+				text-decoration: none;
+
+				img {
+					margin-bottom: 10px;
+				}
+
+				span {
+					display: block;
+				}
+			}
+		}
+
+		.owl-item:last-child {
+			border-right: 1px solid #fff;
+		}
+
+		.owl-wrapper-outer {
+			border-right: 1px solid #fff;
+		}
+
+		.owl-pagination > div {
+
+			&:first-child {
+				position: absolute;
+				margin-top: -10px;
+				top: 50%;
+				left: 32px;
+				
+				span:before {
+					padding: 10px;
+					color: #fff;
+					font-size: 16px;
+					font-family: fontAwesome;
+					content: "\f104";
+				}
+			}
+
+			&:last-child {
+				position: absolute;
+				margin-top: -10px;
+				top: 50%;
+				right: 32px;
+				
+				span:before {
+					padding: 10px;
+					color: #fff;
+					font-size: 16px;
+					font-family: fontAwesome;
+					content: "\f105";
+				}
+			}
+		}
+	}
+}
+
+.tab-pane {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}

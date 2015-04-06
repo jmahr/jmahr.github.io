@@ -1,0 +1,69 @@
+.datepicker {
+	position: absolute;
+	padding: @padding-base-vertical;
+	background-color: @blue-color;
+	z-index: 99999;
+
+	table {
+		position: relative;
+		font-size: 14px;
+		color: #fff;
+
+		th,td {
+			padding: 5px;
+		}
+
+		thead {
+			display: block;
+
+			tr:first-child {
+				background: darken(@blue-color, 10%);
+			}
+
+			i {
+		    display: inline-block;
+		    font-family: FontAwesome;
+		    font-style: normal;
+		    font-weight: normal;
+		    line-height: 1;
+		    font-size-adjust: none;
+		    font-stretch: normal;
+		    font-feature-settings: normal;
+		    font-language-override: normal;
+		    font-kerning: auto;
+		    font-synthesis: weight style;
+		    font-variant: normal;
+		    font-size: inherit;
+		    text-rendering: auto;
+		    -moz-osx-font-smoothing: grayscale;
+			}
+
+			.prev > i:before {
+				color: #fff;
+				font-family: fontAwesome;
+				cursor: pointer;
+				content: "\f104";
+			}
+
+			.next > i:before {
+				color: #fff;
+				font-family: fontAwesome;
+				cursor: pointer;
+				content: "\f105";
+			}
+		}
+
+		tbody {
+			display: block;
+			background: darken(@blue-color, 10%);
+
+			td {
+				padding: 0;
+				width: 28px;
+				height: 28px;
+				text-align: center;
+				cursor: pointer;
+			}
+		}
+	}
+}

@@ -1,0 +1,48 @@
+@main-color: blue;
+@text-color: black;
+
+@facebook-color: #3b5999;
+@twitter-color: #55acee;
+@google-plus-color: #dd4b39;
+@pinterest-color: #ab171e;
+
+@line-height: 20px;
+
+@blue-color: #2a3444;
+@darker-blue-color: darken(#2a3444, 5%);
+@red: #e72f29;
+@light-gray-color: #eee;
+@cornflower-blue: #718eb9;
+
+#media-query-breakpoint { display: none; }
+#media-query-breakpoint,
+#media-query-breakpoint span:before { content: "1200"; }
+
+@media (max-width: @screen-lg-desktop) {
+	#media-query-breakpoint,
+  #media-query-breakpoint span:before { content: "1200"; }
+}
+
+@media (max-width: @screen-md) {
+	#media-query-breakpoint,
+  #media-query-breakpoint span:before { content: "991"; }
+}
+
+@media (max-width: @screen-sm) {
+	#media-query-breakpoint,
+  #media-query-breakpoint span:before { content: "768"; }
+}
+
+@media (max-width: @screen-xs) {
+	#media-query-breakpoint,
+	#media-query-breakpoint span:before { content: "480"; }
+}
+
+
+/*
+  Color Mixins
+
+  Example:
+  #777777 lighten(@text-color, 46.5%)
+  #bebebe lighten(@text-color, 74.5%)
+*/

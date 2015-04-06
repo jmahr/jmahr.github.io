@@ -1,0 +1,125 @@
+/* TROPHIES */
+
+#trophies {
+	position: relative;
+	padding: @padding-large-vertical*5.5 0;
+	border-top: 1px solid @light-gray-color;
+	background: url(../img/soccer_bg.jpg) no-repeat center;
+	background-size: cover;
+
+	.heading > h4 {
+		margin-top: 0;
+	}
+
+	.cup-single {
+		margin: 30px auto;
+		text-align: center;
+
+		&.active {
+			margin-top: 0;
+			
+			.cup-single-frame {
+				padding: @padding-large-vertical*3;
+				height: 225px;
+				border: 5px solid @light-gray-color;
+				border-width: 5px 5px 0 5px;
+				background: #fff;
+
+				img {
+					max-width: 100%;
+					height: 160px;
+					opacity: 1;
+				}
+			}
+
+			.cup-single-caption {
+				padding: @padding-large-vertical*1.2 @padding-small-horizontal*3;
+				display: block;
+				background: @blue-color;
+
+				span {
+					text-transform: uppercase;
+					color: #fff;
+				}
+			}
+		}
+
+		img {
+			opacity: .6;
+		}
+
+		.cup-single-caption {
+			display: none;
+		}
+
+		@media(max-width: @screen-lg-desktop) {
+			margin: 30px 2.5px;
+
+			&.active {
+				margin-top: 30px;
+			}
+
+			.cup-single-frame {
+				padding: @padding-large-vertical*3;
+				height: 225px;
+				border: 5px solid @light-gray-color;
+				border-width: 5px 5px 0 5px;
+				background: #fff;
+
+				img {
+					max-width: 100%;
+					height: 160px;
+					opacity: 1;
+				}
+			}
+
+			.cup-single-caption {
+				padding: @padding-large-vertical*1.2 @padding-small-horizontal*3;
+				display: block;
+				background: @blue-color;
+
+				span {
+					text-transform: uppercase;
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	.owl-controls {
+		position: absolute;
+		margin: 0;
+		top: -55px;
+		right: 15px;
+
+		.owl-buttons > div {
+			margin-left: 2px;
+			float: left;
+			display: inline-block;
+			width: 38px;
+			height: 38px;
+			text-align: center;
+			line-height: 38px;
+			cursor: pointer;
+			background: @red;
+
+			&.owl-prev:before {
+				content: "\f104";
+				font-family: FontAwesome;
+				color: #fff;
+				font-size: 24px;
+			}
+
+			&.owl-next:before {
+				content: "\f105";
+				font-family: FontAwesome;
+				color: #fff;
+				font-size: 24px;
+			}
+
+			&:hover {
+				background: darken(@red, 5%)
+			}
+		}
+	}
+}

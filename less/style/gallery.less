@@ -1,0 +1,36 @@
+/* GALLERY */
+
+#gallery {
+	position: relative;
+	padding: @padding-large-vertical*6.5 0;
+	background: url(../img/stadium_bg.jpg) no-repeat center;
+	background-size: cover;
+
+	.heading > h4 {
+		margin-top: 0;
+		color: #fff;
+
+		&:after {
+			background: #fff;
+		}
+	}
+
+	.gallery-block {
+		margin-bottom: 30px;
+	
+		img {
+			width: 100%;
+			height: 100%;
+			.transition(all .2s ease-in-out); 
+
+			&:hover {
+				opacity: .6;
+				.transition(all .2s ease-in-out); 
+			}
+		}
+	}
+
+	.read_more {
+		margin-top: 15px;
+	}
+}

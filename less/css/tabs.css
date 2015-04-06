@@ -1,0 +1,9 @@
+/* TABS */
+.nav-tabs {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+.nav-tabs.horizontal-tab {
+  border-bottom: 3px solid #eee;
+}
