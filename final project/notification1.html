@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	
+	<script
+	    src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+
+function go(){
+$.ajax({
+	url: "notify.php",
+	method: "POST",
+	data: {
+	  "collection": "timeline",
+	  "itemId": "3hidvm0xez6r8_dacdb3103b8b604_h8rpllg",
+	  "operation": "UPDATE",
+	  "userToken": "105499867526169935261",
+	  "verifyToken": "ya29.1.AADtN_UiFuUFOzAF8i_SgpRs4fvE7GDXzh-WfQFT8ULKge7vUCbxgENYauvQxQ",
+	  "userActions": [
+	    {
+	      "type": "CUSTOM",
+	      "payload": "remember"
+	    }
+	  ]
+	},
+	success:function(data){
+		console.log(data);	
+	}
+});
+}
+</script>
+<body>
+	<button onclick="go()">Test1</button>
+</body>
